@@ -1,9 +1,23 @@
 "use strict";
 
 let allcourses = [];
+let filteredCourses = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
     await getCourses();
+
+    // händelselyssnare för sökning
+    document.querySelector("#search").addEventListener("input", (e) => {
+        const text = e.target.value.toLowerCase();
+
+        // filtrera kurser som matchar sök
+        filteredCourses = allcourses.filter(course => {
+            return course.code.toLowerCase().includes(text) ||
+            course.coursename.toLowerCase().includes(text);
+        });
+
+        displayCourses(filteredCourses);
+    })
 })
 
 async function getCourses() {
@@ -25,6 +39,7 @@ async function getCourses() {
 
 function displayCourses(data) {
     const tableEl = document.querySelector("#tableBody");
+    tableEl.innerHTML = "";
     
     data.forEach(course => {
         tableEl.innerHTML += `
