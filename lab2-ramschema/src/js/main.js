@@ -15,8 +15,25 @@ async function getCourses() {
         const courses = await response.json();
 
         allcourses = courses;
-        console.log(allcourses);
+
+        displayCourses(courses);
+
     } catch (error) {
         console.error("Fel: " + error);
     }
+}
+
+function displayCourses(data) {
+    const tableEl = document.querySelector("#tableBody");
+    
+    data.forEach(course => {
+        tableEl.innerHTML += `
+        <tr>
+        <td class="coursecode">${course.code.toUpperCase()}</td>
+        <td class="coursename">${course.coursename}</td>
+        <td class="progression">${course.progression}</td>
+        <td class="syllabus"><a href="${course.syllabus}">Kursplan för ${course.coursename}</a></td>
+        </tr>
+        `
+    })
 }
