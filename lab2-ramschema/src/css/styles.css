@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 0 1rem;
+}
+
+/*- text -*/
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2rem;
+}
+
+/*- sökruta -*/
+
+#search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#search:focus {
+    border-color: #E2A16F;
+    outline: none;
+}
+
+/*- tabell -*/
+
+table {
+    font-size: 0.9rem;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+thead {
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+th {
+    text-align: left;
+    padding: 10px 8px;
+    cursor: pointer;
+}
+
+th:hover {
+    background-color: #f1f7ff;
+}
+
+tbody tr:hover {
+    background-color: #f1f7ff;
+}
+
+td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #333;
+}
+
+td a {
+    color: #E2A16F;
+    text-align: none;
+    font-weight: 300;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+table .progression {
+    text-align: center;
+}
+
+/*- media queries -*/
+table {
+    font-size: 1rem;
+}
+
+td, th {
+    padding: 12px 15px;
+}
