@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="/src/css/styles.css" />
   </head>
   <body>
+      <div class="container">
+    <!-- header -->
+    <header>
+      <h1>Webbutveckling - Ramschema</h1>
+    </header>
+
+  <main>
+    <!-- sök -->
+    <p>Sök:</p>
+    <input type="text" id="search" placeholder="Sök efter kurskod eller namn..">
+
+    <!-- tabell -->
+    <table>
+      <thead>
+        <tr>
+          <th id="sortCode">Kurskod</th>
+          <th id="sortName">Kursnamn</th>
+          <th id="sortProg">Progression</th>
+          <th id="sortSyll">Kursplan</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+  </main>
+</div>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
